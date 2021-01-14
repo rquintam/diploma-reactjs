@@ -66,3 +66,32 @@ export const Form = styled.form<FormProps>`
     }
   }
 `;
+
+export const Alert = styled.span`
+  display: block;
+  color: #c53030;
+  margin-top: 8px;
+`;
+
+export const Error = styled.div`
+  display: flex;
+  align-items: center;
+  color: #fff;
+  margin-top: 36px;
+  padding: 24px 24px;
+  border: 0;
+  min-height: 70px;
+  background: #c53030;
+  border-radius: 5px;
+
+  p {
+    padding-left: 24px;
+    font-weight: 500;
+  }
+
+  strong {
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+  }
+`;
