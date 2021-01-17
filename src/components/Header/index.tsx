@@ -10,14 +10,14 @@ const Header: React.FC = () => {
 
   return (
     <Container>
-      <header>
+      <div>
         <h1>Diploma</h1>
         <nav>
           <a href="/">Consultar</a>
           <a href="/create">Cadastrar</a>
           <a href="/import">Importar</a>
         </nav>
-      </header>
+      </div>
     </Container>
   );
 };

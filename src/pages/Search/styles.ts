@@ -8,15 +8,6 @@ interface DiplomaProps {
   hasDiploma: boolean;
 }
 
-export const Content = styled.section`
-  max-width: 1120px;
-  padding: 0 25px;
-  margin: 0 auto;
-
-  display: flex;
-  flex-direction: column;
-`;
-
 export const SearchWrapper = styled.div`
   padding-top: 50px;
 
@@ -26,8 +17,6 @@ export const SearchWrapper = styled.div`
     font-weight: bold;
   }
 `;
-
-export const Result = styled.div``;
 
 export const Form = styled.form<FormProps>`
   display: flex;
@@ -113,56 +102,61 @@ export const Error = styled.div`
   }
 `;
 
-export const Diploma = styled.section<DiplomaProps>`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 40px;
-  padding: 50px 40px 40px 50px;
-  color: #fff;
-  background: #12a454;
-
-  border: 0;
-  border-radius: 5px;
-
-  transition: transform 0.2s;
-
-  ${props =>
-    props.hasDiploma &&
-    css`
-      background: #3662d3;
-    `}
-
-  &:hover {
-    transform: translate3d(10px, 10px, 10px);
-  }
-
-  div {
+export const Diploma = styled.div<DiplomaProps>`
+  a {
     display: flex;
-    flex-direction: column;
-
-    h1 {
-      line-height: 30px;
-      color: #fff;
-    }
-
-    h1:first-child {
-      font-size: 36px;
-      padding-bottom: 25px;
-    }
-
-    h1:nth-child(2) {
-      padding-top: 20px;
-    }
-
-    p {
-      line-height: 30px;
-    }
-  }
-
-  div:nth-child(2) {
-    min-width: 100px;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+
+    margin-top: 40px;
+    padding: 50px 40px 40px 50px;
+
+    color: #fff;
+    background: #12a454;
+    text-decoration: none;
+
+    border: 0;
+    border-radius: 5px;
+
+    transition: transform 0.3s;
+
+    div {
+      display: flex;
+      flex-direction: column;
+
+      h1 {
+        line-height: 30px;
+        color: #fff;
+      }
+
+      h1:first-child {
+        font-size: 36px;
+        padding-bottom: 25px;
+      }
+
+      h1:nth-child(2) {
+        padding-top: 20px;
+      }
+
+      p {
+        line-height: 30px;
+      }
+    }
+
+    div:nth-child(2) {
+      min-width: 150px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    ${props =>
+      props.hasDiploma &&
+      css`
+        background: #3662d3;
+      `}
+
+    &:hover {
+      transform: translate3d(50px, 10px, 10px);
+    }
   }
 `;

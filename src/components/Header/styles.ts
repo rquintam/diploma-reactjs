@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.header`
   background: #363f5f;
 
-  header {
+  div {
     max-width: 1120px;
     height: 100px;
     margin: 0 auto;
