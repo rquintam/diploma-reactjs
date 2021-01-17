@@ -5,7 +5,7 @@ export const Container = styled.div`
 
   header {
     max-width: 1120px;
-    height: 90px;
+    height: 100px;
     margin: 0 auto;
     padding: '0 20px 150px';
     display: flex;
@@ -14,7 +14,7 @@ export const Container = styled.div`
 
     h1 {
       color: #fff;
-      font-size: 24px;
+      font-size: 36px;
     }
 
     nav {
@@ -22,14 +22,24 @@ export const Container = styled.div`
         color: #fff;
         text-decoration: none;
         font-size: 16px;
-        transition: color 0.2s;
+        transition: background-color 0.2s;
+        padding: 5px 15px;
+        border-bottom: 4px solid #3662d3;
+        cursor: default;
 
         & + a {
-          margin-left: 40px;
+          margin-left: 30px;
+          border-bottom: 0;
+          opacity: 60%;
+          cursor: pointer;
         }
 
-        &:hover {
-          color: #3662d3;
+        & + a:hover {
+          opacity: 100%;
+          background: #3662d3;
+          padding: 10px 15px;
+          border-bottom: 0;
+          border-radius: 5px;
         }
       }
     }

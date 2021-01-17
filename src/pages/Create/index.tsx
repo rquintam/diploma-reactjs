@@ -2,8 +2,8 @@ import React from 'react';
 
 import Header from '../../components/Header';
 
-const Import: React.FC = () => {
+const Create: React.FC = () => {
   return <Header />;
 };
 
-export default Import;
+export default Create;
